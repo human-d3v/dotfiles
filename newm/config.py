@@ -209,7 +209,7 @@ def key_bindings(layout: Layout) -> list[tuple[str, Callable[[], Any]]]:
         #apps
         ("L-f", lambda: os.system("thunar &")),
         ("L-e", lambda: os.system("geany &")),
-        ("L-w", lambda: os.system("firefox &)),
+        ("L-w", lambda: os.system("firefox &")),
 
         #rofi
         ("A-F1", lambda: os.system(f"{rofi_launcher} &")),
