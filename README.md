@@ -1,1 +1,1 @@
-# Arch Linux Dotfiles for NEWM-Atha window manager. 
+# Dotfiles for vanilla arch
