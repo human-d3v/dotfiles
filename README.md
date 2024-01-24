@@ -1,1 +1,1 @@
-# Dotfiles for vanilla arch
+# Dotfiles for Arch Linux Hyprland Config
