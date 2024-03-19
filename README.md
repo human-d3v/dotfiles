@@ -1,1 +1,6 @@
-# Dotfiles for Arch Linux Hyprland Config
+# Dotfiles for Fedora Linux Hyprland Config
+### Dependencies
+* rofi
+* waybar
+* kitty
+* nautilus
