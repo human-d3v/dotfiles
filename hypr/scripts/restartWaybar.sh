@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-#startup script
+#!/bin/bash
 
 _ps=(waybar)
 for _prs in "${_ps[@]}"; do 
@@ -10,6 +9,3 @@ done
 
 waybar -c ~/.config/waybar/config &
 # waybar -c ~/.config/hypr/waybar/config &
-
-~/.config/hypr/scripts/wallpaper &
-~/.config/hypr/scripts/idle & 

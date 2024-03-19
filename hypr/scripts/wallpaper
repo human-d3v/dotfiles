@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-WALLPAPER='/home/bryart/Pictures/wallpapers/wallpaper_1.jpg'
+WALLPAPER='/home/bryart/Pictures/Wallpaper_1.png'
 swaybg --output '*' --mode fill --image "$WALLPAPER"
