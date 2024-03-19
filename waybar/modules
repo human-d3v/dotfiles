@@ -88,25 +88,49 @@
            
 	// waybar-custom
     "custom/themes": {
-        "format": "",
+        "format": "{} Updates",
         "tooltip": false,
-        "on-click": "$HOME/.config/hypr/theme/theme.sh --pywal",
-        "on-click-right": "$HOME/.config/hypr/theme/theme.sh --default",
+				"exec": "$HOME/.config/hypr/scripts/update_widget/check-update.sh",
+				"on-click": "$HOME/.config/hypr/scripts/update_widget/click-update.sh",
+				"interval": 3600,
+				"tooltip": "Available updates",
     },
 
     "custom/menu": {
          "format": "󰔈",
          "tooltip": false,
          //"on-click": "$HOME/.config/hypr/scripts/wofi_menu",
-         "on-click": "$HOME/.config/hypr/scripts/rofi_launcher",
-         "on-click-right": "$HOME/.config/hypr/scripts/rofi_runner",
+         "on-click": "$HOME/.config/hypr/scripts/rofi/rofi_launcher",
+         "on-click-right": "$HOME/.config/hypr/scripts/rofi/rofi_runner",
     },
+		
+		"custom/launch-dock": {
+				"format": "󰅂",
+		},
+
+		"custom/launch-dock-browser": {
+				"format":"󰘯",
+				"on-click": "brave-browser",
+				"tooltip": "Brave Browser",
+		},
+
+		"custom/launch-dock-filemanager": {
+        "format":"",
+        "on-click": "nautilus",
+        "tooltip": "nautilus",
+    },
+
+		"custom/launch-dock-terminal": {
+				"format":"󰆍",
+				"on-click": "kitty",
+				"tooltip": "terminal",
+		}, 
 
     "custom/power": {
          "format": "⏻",
          "tooltip": false,
          //"on-click": "$HOME/.config/hypr/scripts/wlogout",
-         "on-click": "$HOME/.config/hypr/scripts/rofi_powermenu",
+         "on-click": "$HOME/.config/hypr/scripts/rofi/rofi_powermenu",
     },
 
 	// waybar-disk
@@ -269,16 +293,16 @@
          "sort-by-number": true,
          "active-only": false,
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "󰡷",
-             "4": "󰻈",
-             "5": "󰽒",
-             "6": "󰖃",
-             "7": "󱤆",
-             "8": "󱔐",
-             "9": "",
-             "10": "󰻝",
+             "1": "1: ",
+             "2": "2: ",
+             "3": "3: 󰻝",
+             "4": "4: 󰻈",
+             "5": "5: 󰽒",
+             "6": "6: 󰖃",
+             "7": "7: 󱤆",
+             "8": "8: 󱔐",
+             "9": "9: ",
+             "10": "10: 󰡷",
              "urgent": "",
              "focused": "",
              "default": ""

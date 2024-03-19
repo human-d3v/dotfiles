@@ -8,14 +8,14 @@
 /** ********** Fonts ********** **/
 * {
     font-family: "JetBrains Mono", "Iosevka Nerd Font", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-    background-color: @background;
+    background-color: rgba(15, 11, 25, 0.4);
 	color: @foreground;
-    border-bottom: 2px solid @background-alt1;
+    border-bottom: 2px solid rgba(15, 11, 25, 0.1);
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -27,29 +27,61 @@ window#waybar.hidden {
 /** ********** Custom ********** **/
 
 #custom-menu {
-	background-color: @background-alt1;
+	background-color: rgba(15,11,25,0.6);
 	color: @magenta;
 	font-size: 18px;
-	border-radius: 0px 14px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	padding: 2px 8px 2px 8px;
+	border-radius: 0px 14px 14px 0px;
+	margin: 6px 0px 6px 0px ;
+	padding: 4px 6px;
 }
 
 #custom-themes {
-    background-color: @selected;
+    background-color: @red;
 }
+
+/* **************launch dock************** */
+
+
+#custom-launch-dock {
+  background-color: rgba(15, 11, 25, 0.8);
+	color: rgba(255,255,255, 0.9);
+	border-radius: 14px 0px 0px 14px;
+	margin: 6px 0px 6px 4px;
+	padding: 6px 8px 2px 8px;
+}
+
+#custom-launch-dock-browser,
+#custom-launch-dock-terminal{
+	font-size: 22px;
+	background-color: rgba(15, 11, 25, 0.6);
+	margin: 6px 0px 6px 0px ;
+	padding: 5px 6px 4px 6px;
+	border-radius: 0px 0px 0px 0px;
+}
+
+#custom-launch-dock-filemanager {
+	font-size: 22px;
+	background-color: rgba(15, 11, 25, 0.6);
+	margin: 6px 6px 6px 0px ;
+	padding: 5px 6px 4px 6px;
+	border-radius: 0px 10px 10px 0px;
+}
+
 
 #custom-power {
 	background-color: @red;
-	font-size: 16px;
+	font-size: 18px;
+	padding: 9px 6px;
 }
 
 #custom-power, #custom-themes {
-	color: @background;
+	background-color: rgba(15, 11, 25, 0.4);
 	border-radius: 10px;
 	margin: 6px 6px 6px 0px;
 	padding: 2px 8px 2px 8px;
 }
+
+
 
 /** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
@@ -65,7 +97,7 @@ window#waybar.hidden {
 
 /** ********** Tray ********** **/
 #tray {
-	background-color: @background-alt1;
+	background-color: rgba(26, 20, 42, 0.6);
 	border-radius: 10px;
 	margin: 6px 0px 6px 6px ;
 	padding: 4px 6px;
@@ -260,17 +292,18 @@ window#waybar.hidden {
 
 /** ********** WLR Desktop ********** **/
 #workspaces {
-	background-color: @background;
+	background-color: rgba(15, 11, 25, 0.8);
 	border-radius: 10px;
 	margin-left: 6px ;
-	margin-bottom: 2px ;
+	margin-bottom: 6px ;
+	margin-top: 5px;
 	padding: 0px;
 }
 #workspaces button{
 	color: @foreground;
 }
 #workspaces button.active{
-	color: @red;
+	color: #B18E5E;
 }
 #workspaces button.urgent{
 	color: @green;
@@ -289,7 +322,7 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #bluetooth {
-	background-color: @background-alt2;
+	background-color: rgba(26, 20, 42, 0.6);
 	border-radius: 10px 0px 0px 10px;
 	margin: 6px 0px 6px 0px ;
 	padding: 4px 6px;
@@ -304,7 +337,7 @@ window#waybar.hidden {
 #pulseaudio.2,
 #network.2,
 #bluetooth.2 {
-	background-color: @background-alt1;
+	background-color: rgba(26, 20, 42, 0.8);
 	color: @foreground;
 	font-size: 12px;
 	font-weight: bold;

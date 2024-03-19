@@ -7,7 +7,7 @@
     "exclusive": true, 				// Request an exclusive zone from the compositor
     "passthrough": false, 			// Pass any pointer events to the window under the bar
     "position": "top", 				// Waybar position (top|bottom|left|right)
-    "height": 34, 					// Waybar height (to be removed for auto height)
+    "height": 20, 					// Waybar height (to be removed for auto height)
     "width": "", 					// Waybar width (empty for auto width)
     "spacing": 0, 					// Gaps between modules
     "margin": 0, 					// Space around the bar
@@ -18,7 +18,7 @@
     "fixed-center": true, 			// Center modules position
     "ipc": true, 					// Control waybar with `swaymsg bar` commands
     // Choose the order of the modules
-    "modules-left": ["custom/menu", "hyprland/workspaces", "idle_inhibitor", "tray", "mpd#2", "mpd#3", "mpd#4", "mpd" ],
+    "modules-left": ["custom/menu", "hyprland/workspaces", "idle_inhibitor", "custom/launch-dock", "custom/launch-dock-browser","custom/launch-dock-terminal","custom/launch-dock-filemanager", "tray"],
     //"modules-left": ["custom/menu", "hyprland/workspaces", "idle_inhibitor", "tray", "custom/spotify" ],
     "modules-center": [ "cpu", "cpu#2", "memory", "memory#2", "disk", "disk#2" ],
     "modules-right": ["custom/themes", "pulseaudio", "pulseaudio#2", "backlight", "backlight#2", "battery", "battery#2", "bluetooth", "bluetooth#2", "network", "network#2", "clock", "clock#2", "custom/power"],
