@@ -1,347 +1,118 @@
-/* 
- * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-*/
+@define-color background rgba(0,0,0,0.07);
+/* @define-color foreground rgba(181,181,181,1); */
+@define-color foreground #cccbcc;
+@define-color widget-background #75634f;
+@define-color widget-other #86422c;
 
-/** ********** Import Colors ********** **/
-@import "./colors.css";
-
-/** ********** Fonts ********** **/
-* {
-    font-family: "JetBrains Mono", "Iosevka Nerd Font", sans-serif;
-    font-size: 12px;
-}
-
-/** ********** Waybar Window ********** **/
 window#waybar {
-    background-color: rgba(15, 11, 25, 0.4);
+	background-color: @background;
 	color: @foreground;
-    border-bottom: 2px solid rgba(15, 11, 25, 0.1);
-    transition-property: background-color;
-    transition-duration: .5s;
+	min-height: 0;
+	border-bottom: 0px solid @foreground;
 }
-
-window#waybar.hidden {
-    opacity: 0.5;
-}
-
-/** ********** Custom ********** **/
 
 #custom-menu {
-	background-color: rgba(15,11,25,0.6);
-	color: @magenta;
+	background-color: @widget-background;
 	font-size: 18px;
+	margin: 2px 8px 0px 2px;
+	padding: 0px 6px 0px 6px;
 	border-radius: 0px 14px 14px 0px;
-	margin: 6px 0px 6px 0px ;
-	padding: 4px 6px;
+	opacity: 0.5;
 }
 
-#custom-themes {
-    background-color: @red;
+#workspaces {
+	background-color: @widget-background;
+	font-size: 14px;
+	color: @foreground;
+	border-radius: 14px;
+	margin: 2px 8px 0px 2px;
+	padding: 0px 2px 0px 6px;
+	opacity: 0.5;
 }
 
-/* **************launch dock************** */
-
+#workspaces button.active {
+	color: @foreground;
+}
 
 #custom-launch-dock {
-  background-color: rgba(15, 11, 25, 0.8);
-	color: rgba(255,255,255, 0.9);
-	border-radius: 14px 0px 0px 14px;
-	margin: 6px 0px 6px 4px;
-	padding: 6px 8px 2px 8px;
+	background-color: @widget-other;
+	border-radius: 10px 0px 0px 10px;
+	padding: 0px 4px 0px 4px;
+	margin: 2px 0px 2px 0px;
+	font-size: 10px;
+	opacity: 0.5;
 }
 
 #custom-launch-dock-browser,
-#custom-launch-dock-terminal{
-	font-size: 22px;
-	background-color: rgba(15, 11, 25, 0.6);
-	margin: 6px 0px 6px 0px ;
-	padding: 5px 6px 4px 6px;
-	border-radius: 0px 0px 0px 0px;
+#custom-launch-dock-terminal,
+#custom-launch-dock-steam {
+	background-color: @widget-background;
+  padding: 0px 4px 0px 4px;
+  font-size: 18px;
+	margin: 2px 0px 2px 0px;
+	font-weight: bold;
+	opacity: 0.5;
 }
 
 #custom-launch-dock-filemanager {
-	font-size: 22px;
-	background-color: rgba(15, 11, 25, 0.6);
-	margin: 6px 6px 6px 0px ;
-	padding: 5px 6px 4px 6px;
+	background-color: @widget-background;
+  font-size: 18px;
+	padding: 0px 4px 0px 4px;
+	font-size: 18px;
+	margin: 2px 0px 2px 0px;
 	border-radius: 0px 10px 10px 0px;
+	opacity: 0.5;
 }
 
+#window {
+	background-color: @widget-background;
+	margin: 2px 8px 2px 16px;
+	font-size: 13px;
+	border-radius: 10px;
+	opacity: 0.5;
+}
+
+#clock,
+#network {
+	background: @widget-other;
+	opacity: 0.4;
+	margin: 2px 0px 2px 0px;
+	border-radius: 10px 0px 0px 10px;
+	padding: 0px 4px 0px 4px;
+}
+
+#clock.2,
+#network.2 {
+  background-color: @widget-background;
+	margin: 2px 8px 2px 0px;
+	border-radius: 0px 10px 10px 0px;
+	padding: 0px 4px 0px 4px;
+	opacity: .5;
+}
 
 #custom-power {
-	background-color: @red;
-	font-size: 18px;
-	padding: 9px 6px;
-}
-
-#custom-power, #custom-themes {
-	background-color: rgba(15, 11, 25, 0.4);
-	border-radius: 10px;
-	margin: 6px 6px 6px 0px;
-	padding: 2px 8px 2px 8px;
-}
-
-
-
-/** ********** Idle Inhibitor ********** **/
-#idle_inhibitor {
-	background-color: @green;
-	color: @background;
-	border-radius: 10px;
-	margin: 6px 0px 6px 6px ;
-	padding: 4px 6px;
-}
-#idle_inhibitor.deactivated {
-	background-color: @red;
-}
-
-/** ********** Tray ********** **/
-#tray {
-	background-color: rgba(26, 20, 42, 0.6);
-	border-radius: 10px;
-	margin: 6px 0px 6px 6px ;
-	padding: 4px 6px;
-}
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-}
-#tray > .active {
-}
-
-/** ********** MPD ********** **/
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-#mpd {
-	color: @foreground;
-	font-size: 12px;
-	font-weight: bold;
-}
-#mpd.disconnected {
-	color: @red;
-}
-#mpd.stopped {
-	color: @red;
-}
-#mpd.playing {
-	color: @cyan;
-}
-#mpd.paused {
-}
-
-#mpd.2 {
 	border-radius: 10px 0px 0px 10px;
-	margin: 6px 0px 6px 6px ;
-	padding: 4px 6px 4px 10px;
-}
-#mpd.3 {
-	margin: 6px 0px 6px 0px ;
-	padding: 4px;
-}
-#mpd.4 {
-	border-radius: 0px 10px 10px 0px;
-	margin: 6px 6px 6px 0px ;
-	padding: 4px 10px 4px 6px;
-}
-#mpd.2,#mpd.3,#mpd.4 {
-	background-color: @background-alt1;
-	font-size: 14px;
+	background-color: @widget-background;
+	padding: 0px 8px 0px 6px;
+	opacity: .5;
 }
 
-/** ********** Spotify ********** **/
-#custom-spotify {
-	background-color: @background-alt1;
-	color: @foreground;
-	border-radius: 10px;
-	margin: 6px 0px 6px 6px ;
-	padding: 4px 8px;
-	font-size: 12px;
-	font-weight: bold;
+/* cool animations */
+
+@keyframes slideFromLeft {
+	from {
+		opacity: 0;
+		margin-left: -100px;
+	}
+	to { 
+		opacity: 1;
+		margin-left: 0;
+	}
 }
 
-#custom-spotify.paused {
-	color: @foreground;
-}
-
-#custom-spotify.playing {
-    background: linear-gradient(90deg, @magenta 25%, @red 50%, @yellow 75%, @cyan 100%); 
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
-    color: @background;
-}
-
-#custom-spotify.offline {
-	color: @red;
-}
-
-/** ********** CPU ********** **/
-#cpu {
-	color: @red;
-}
-
-/** ********** Memory ********** **/
-#memory {
-	color: @green;
-}
-
-/** ********** Disk ********** **/
-#disk {
-	color: @yellow;
-}
-
-/** ********** Pulseaudio ********** **/
-#pulseaudio {
-	color: @blue;
-}
-#pulseaudio.bluetooth {
-	color: @cyan;
-}
-#pulseaudio.muted {
-	color: @red;
-}
-
-#pulseaudio.2 {
-}
-#pulseaudio.2.bluetooth {
-}
-#pulseaudio.2.muted {
-}
-
-/** ********** Backlight ********** **/
-#backlight {
-	color: @magenta;
-}
-
-/** ********** Battery ********** **/
-#battery {
-	color: @cyan;
-}
-#battery.charging {
-}
-#battery.plugged {
-}
-@keyframes blink {
-    to {
-        color: @foreground;
-    }
-}
-#battery.critical:not(.charging) {
-	background-color: @background-alt2;
-}
-#battery.2.critical:not(.charging) {
-	background-color: @background-alt1;
-    color: @red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-/** ********** Network ********** **/
-#network {
-	color: @yellow;
-}
-#network.disconnected,#network.disabled {
-	color: @red;
-}
-#network.linked {
-}
-#network.ethernet {
-}
-#network.wifi {
-}
-
-/** ********** Bluetooth ********** **/
-#bluetooth {
-	color: @green;
-}
-#bluetooth.disabled{
-	color: @red;
-}
-#bluetooth.off{
-	color: @red;
-}
-#bluetooth.on{
-}
-#bluetooth.connected{
-}
-#bluetooth.discoverable{
-}
-#bluetooth.discovering{
-}
-#bluetooth.pairable{
-}
-
-/** ********** Clock ********** **/
-#clock {
-	color: @blue;
-}
-
-/** ********** WLR Desktop ********** **/
-#workspaces {
-	background-color: rgba(15, 11, 25, 0.8);
-	border-radius: 10px;
-	margin-left: 6px ;
-	margin-bottom: 6px ;
-	margin-top: 5px;
-	padding: 0px;
-}
-#workspaces button{
-	color: @foreground;
-}
-#workspaces button.active{
-	color: #B18E5E;
-}
-#workspaces button.urgent{
-	color: @green;
-}
-#workspaces button.hidden{
-	color: @yellow;
-}
-
-/** ********** Common style ********** **/
-#backlight, 
-#battery,
-#clock,
-#cpu,
-#disk,
-#memory,
-#pulseaudio,
-#network,
-#bluetooth {
-	background-color: rgba(26, 20, 42, 0.6);
-	border-radius: 10px 0px 0px 10px;
-	margin: 6px 0px 6px 0px ;
-	padding: 4px 6px;
-}
-
-#backlight.2, 
-#battery.2,
-#clock.2,
-#cpu.2,
-#disk.2,
-#memory.2,
-#pulseaudio.2,
-#network.2,
-#bluetooth.2 {
-	background-color: rgba(26, 20, 42, 0.8);
-	color: @foreground;
-	font-size: 12px;
-	font-weight: bold;
-	border-radius: 0px 10px 10px 0px;
-	margin: 6px 6px 6px 0px ;
-	padding: 5px 6px 4px 6px;
+.custom-launch-dock:hover + .custom-launch-dock-browser,
+.custom-launch-dock:hover + .custom-launch-dock-terminal,
+.custom-launch-dock:hover + .custom-launch-dock-steam,
+.custom-launch-dock:hover + .custom-launch-dock-filemanager {
+	animation: slideFromLeft 0.5s forwards;
 }
