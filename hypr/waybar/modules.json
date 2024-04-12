@@ -1,14 +1,11 @@
 {
-	// waybar-backlight
 
     "backlight": {
 		"interval": 2,
 
-        //"device": "amdgpu_bl0",
         "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", ""],
 
-		// Commands to execute on events
         "on-scroll-up": "light -A 5%",
         "on-scroll-down": "light -U 5%",
         "smooth-scrolling-threshold": 1,
@@ -16,21 +13,15 @@
     "backlight#2": {
 		"interval": 2,
 
-        //"device": "amdgpu_bl0",
         "format": "{percent}%",
 
-		// Commands to execute on events
         "on-scroll-up": "light -A 5%",
         "on-scroll-down": "light -U 5%",
         "smooth-scrolling-threshold": 1,
     },
 
 
-	// waybar-bluetooth
     "bluetooth": {
-        //"controller": "controller1",
-        //"format-device-preference": "",
-	// waybar-battery
         "format": "󰂯",
         "format-on": "󰂯",
         "format-off": "󰂲",
@@ -61,7 +52,6 @@
         "on-click-right": "blueman-manager",
     },
 
-	// waybar-clock
     "clock": {
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "",
@@ -73,7 +63,6 @@
         "format-alt": "{:%a %b %d, %G}"
     },
 
-	// waybar-cpu
     "cpu": {
          "interval": 5,
          "format": "󰻠",

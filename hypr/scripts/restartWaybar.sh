@@ -7,5 +7,5 @@ for _prs in "${_ps[@]}"; do
 	fi
 done
 
-waybar -c ~/.config/waybar/config &
-# waybar -c ~/.config/hypr/waybar/config &
+# waybar -c ~/.config/waybar/config &
+waybar -c ~/.config/hypr/waybar/config &
