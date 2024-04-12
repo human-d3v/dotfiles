@@ -1,8 +1,8 @@
-@define-color background rgba(0,0,0,0.07);
+@define-color background rgba(0,0,0,0.04);
 /* @define-color foreground rgba(181,181,181,1); */
 @define-color foreground #cccbcc;
-@define-color widget-background #75634f;
-@define-color widget-other #86422c;
+@define-color widget-background #273d36;
+@define-color widget-other #182622;
 
 window#waybar {
 	background-color: @background;
@@ -17,7 +17,7 @@ window#waybar {
 	margin: 2px 8px 0px 2px;
 	padding: 0px 6px 0px 6px;
 	border-radius: 0px 14px 14px 0px;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 #workspaces {
@@ -27,7 +27,7 @@ window#waybar {
 	border-radius: 14px;
 	margin: 2px 8px 0px 2px;
 	padding: 0px 2px 0px 6px;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 #workspaces button.active {
@@ -40,19 +40,22 @@ window#waybar {
 	padding: 0px 4px 0px 4px;
 	margin: 2px 0px 2px 0px;
 	font-size: 10px;
-	opacity: 0.5;
+	opacity: 0.6;
 }
+
 
 #custom-launch-dock-browser,
 #custom-launch-dock-terminal,
-#custom-launch-dock-steam {
+#custom-launch-dock-steam,
+#custom-launch-dock-gimp {
 	background-color: @widget-background;
   padding: 0px 4px 0px 4px;
   font-size: 18px;
 	margin: 2px 0px 2px 0px;
 	font-weight: bold;
-	opacity: 0.5;
+	opacity: 0.6;
 }
+
 
 #custom-launch-dock-filemanager {
 	background-color: @widget-background;
@@ -61,7 +64,7 @@ window#waybar {
 	font-size: 18px;
 	margin: 2px 0px 2px 0px;
 	border-radius: 0px 10px 10px 0px;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 #window {
@@ -69,32 +72,34 @@ window#waybar {
 	margin: 2px 8px 2px 16px;
 	font-size: 13px;
 	border-radius: 10px;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 #clock,
-#network {
+#network,
+#custom-alsa {
 	background: @widget-other;
-	opacity: 0.4;
+	opacity: 0.6;
 	margin: 2px 0px 2px 0px;
 	border-radius: 10px 0px 0px 10px;
 	padding: 0px 4px 0px 4px;
 }
 
 #clock.2,
-#network.2 {
+#network.2,
+#custom-alsa.2 {
   background-color: @widget-background;
 	margin: 2px 8px 2px 0px;
 	border-radius: 0px 10px 10px 0px;
 	padding: 0px 4px 0px 4px;
-	opacity: .5;
+	opacity: .6;
 }
 
 #custom-power {
 	border-radius: 10px 0px 0px 10px;
 	background-color: @widget-background;
 	padding: 0px 8px 0px 6px;
-	opacity: .5;
+	opacity: .6;
 }
 
 /* cool animations */

@@ -1,0 +1,5 @@
+@import "/etc/xdg/waybar/style.css";
+
+* {
+	min-height: 0;
+}
