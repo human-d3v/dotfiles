@@ -11,5 +11,13 @@ done
 # waybar -c ~/.config/waybar/config &
 waybar -c ~/.config/hypr/waybar/config &
 
+## Idle
+~/.config/hypr/scripts/idle & 
+systemctl --user enable --now hypridle.service &
+
+## Fix audio problems
+systemctl --user disable --now pulseaudio &
+systemctl --user mask pulseaudio &
+
 ~/.config/hypr/scripts/wallpaper &
 ~/.config/hypr/scripts/idle & 
