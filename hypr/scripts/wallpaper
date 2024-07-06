@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#
+# WALLPAPER='$HOME/Pictures/dolomites.jpg'
+# swaybg --output '*' --mode fill --image "$WALLPAPER"
+#
 
-WALLPAPER='/home/bryart/Pictures/dolomites.jpg'
-swaybg --output '*' --mode fill --image "$WALLPAPER"
+hyprpaper -c $HOME/.config/hyprpaper/hyprpaper.conf

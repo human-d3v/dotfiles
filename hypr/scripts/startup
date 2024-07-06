@@ -16,8 +16,8 @@ waybar -c ~/.config/hypr/waybar/config &
 systemctl --user enable --now hypridle.service &
 
 ## Fix audio problems
-systemctl --user disable --now pulseaudio &
-systemctl --user mask pulseaudio &
+##systemctl --user disable --now pulseaudio &
+##systemctl --user mask pulseaudio &
 
-~/.config/hypr/scripts/wallpaper &
-~/.config/hypr/scripts/idle & 
+# ~/.config/hypr/scripts/wallpaper
+# ~/.config/hypr/scripts/idle & 
