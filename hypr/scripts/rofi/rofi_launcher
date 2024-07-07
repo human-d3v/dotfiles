@@ -7,4 +7,4 @@ RASI="$DIR/scripts/rofi/launcher.rasi"
 # Run
 rofi \
     -show drun \
-	-theme ${RASI}
+	-theme ${RASI} & hyprctl activewindow

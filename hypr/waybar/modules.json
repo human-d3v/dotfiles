@@ -96,8 +96,8 @@
 
 		"custom/launch-dock-browser": {
 				"format":"󰘯",
-				"on-click": "brave-browser",
-				"tooltip": "Brave Browser",
+				"on-click": "google-chrome-stable",
+				"tooltip": "google-chrome-stable",
 		},
 
 		"custom/launch-dock-ebook":{
@@ -202,7 +202,7 @@
          "sort-by-number": true,
          "active-only": false,
          "format-icons": {
-             "1": "1: ",
+             "1": "1: 󰶵",
              "2": "2: ",
              "3": "3: 󰻝",
              "4": "4: 󰻈",
@@ -218,6 +218,10 @@
          },
          "on-click": "activate",
     },
+
+		"custom/workspace-wrapper": {
+			"format": "",
+		},
 
 	// waybar-tray
 }

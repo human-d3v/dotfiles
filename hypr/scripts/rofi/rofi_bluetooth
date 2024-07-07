@@ -280,7 +280,7 @@ show_menu() {
 }
 
 
-rofi_command="rofi -theme "${RASI}" -dmenu $* -p"
+rofi_command="rofi -theme "${RASI}" -dmenu $* -p & hyprctl activewindow"
 
 case "$1" in 
 	--status)

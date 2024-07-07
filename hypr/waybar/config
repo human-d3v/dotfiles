@@ -3,7 +3,7 @@
 	"css": "~/.config/waybar/style.css",
 	"layer":"top",
 	"height": 15,
-	"modules-left": ["custom/menu","hyprland/workspaces", "hyprland/window"],
+	"modules-left": ["custom/menu","custom/workspace-wrapper","hyprland/workspaces", "hyprland/window"],
 	"modules-center": ["custom/launch-dock","custom/launch-dock-browser","custom/launch-dock-terminal","custom/launch-dock-steam","custom/launch-dock-gimp","custom/launch-dock-ebook","custom/launch-dock-filemanager"],
 	"modules-right": ["bluetooth","bluetooth#2","custom/alsa","custom/alsa#2","clock","clock#2","network","network#2","custom/power"],
 }

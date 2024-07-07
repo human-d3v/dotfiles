@@ -12,21 +12,21 @@ window#waybar {
 }
 
 #custom-menu {
-	background-color: @widget-background;
+	background-color: @widget-other;
 	font-size: 18px;
-	margin: 2px 8px 0px 2px;
-	padding: 0px 6px 0px 6px;
-	border-radius: 0px 14px 14px 0px;
+	margin: 2px 8px 2px 0px;
+	padding: 0px 8px 0px 8px;
+	border-radius: 0px 10px 10px 0px;
 	opacity: 0.6;
 }
 
 #workspaces {
 	background-color: @widget-background;
-	font-size: 14px;
+	font-size: 16px;
 	color: @foreground;
-	border-radius: 14px;
-	margin: 2px 8px 0px 2px;
-	padding: 0px 2px 0px 6px;
+	border-radius: 0px 10px 10px 0px;
+	margin: 2px 8px 2px 0px;
+	padding: 0px 4px 0px 0px;
 	opacity: 0.6;
 }
 
@@ -39,7 +39,7 @@ window#waybar {
 	border-radius: 10px 0px 0px 10px;
 	padding: 0px 4px 0px 4px;
 	margin: 2px 0px 2px 0px;
-	font-size: 10px;
+	font-size: 18px;
 	opacity: 0.6;
 }
 
@@ -47,7 +47,8 @@ window#waybar {
 #custom-launch-dock-browser,
 #custom-launch-dock-terminal,
 #custom-launch-dock-steam,
-#custom-launch-dock-gimp {
+#custom-launch-dock-gimp,
+#custom-launch-dock-ebook {
 	background-color: @widget-background;
   padding: 0px 4px 0px 4px;
   font-size: 18px;
@@ -60,9 +61,9 @@ window#waybar {
 #custom-launch-dock-filemanager {
 	background-color: @widget-background;
   font-size: 18px;
-	padding: 0px 4px 0px 4px;
+	padding: 0px 12px 0px 4px;
 	font-size: 18px;
-	margin: 2px 0px 2px 0px;
+	margin: 2px 2px 2px 0px;
 	border-radius: 0px 10px 10px 0px;
 	opacity: 0.6;
 }
@@ -70,35 +71,42 @@ window#waybar {
 #window {
 	background-color: @widget-background;
 	margin: 2px 8px 2px 16px;
-	font-size: 13px;
+	padding: 0px 4px 0px 4px;
+	font-size: 16px;
 	border-radius: 10px;
 	opacity: 0.6;
 }
 
 #clock,
 #network,
-#custom-alsa {
+#custom-alsa,
+#bluetooth,
+#custom-workspace-wrapper {
+	font-size: 16px;
 	background: @widget-other;
 	opacity: 0.6;
-	margin: 2px 0px 2px 0px;
+	margin: 2px 0px 2px 2px;
 	border-radius: 10px 0px 0px 10px;
-	padding: 0px 4px 0px 4px;
+	padding: 0px 8px 0px 4px;
 }
 
 #clock.2,
 #network.2,
-#custom-alsa.2 {
+#custom-alsa.2,
+#bluetooth.2 {
+	font-size: 16px;
   background-color: @widget-background;
 	margin: 2px 8px 2px 0px;
 	border-radius: 0px 10px 10px 0px;
-	padding: 0px 4px 0px 4px;
+	padding: 0px 4px 0px 2px;
 	opacity: .6;
 }
 
 #custom-power {
 	border-radius: 10px 0px 0px 10px;
-	background-color: @widget-background;
+	background-color: @widget-other;
 	padding: 0px 8px 0px 6px;
+	font-size:18px;
 	opacity: .6;
 }
 
