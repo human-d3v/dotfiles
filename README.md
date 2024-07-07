@@ -6,6 +6,7 @@
 * [nautilus](https://apps.gnome.org/Nautilus/)
 * [hyprlock](https://github.com/hyprwm/hyprlock)
 * [hypridle](https://github.com/hyprwm/hypridle)
+* [hyprpaper](https://github.com/hyprwm/hyprpaper)
 
 ##### Install Required dependencies
 ```bash
