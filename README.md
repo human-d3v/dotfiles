@@ -2,7 +2,6 @@
 ### Dependencies
 * [rofi](https://github.com/davatorium/rofi)
 * [waybar](https://github.com/Alexays/Waybar)
-* [kitty](https://github.com/kovidgoyal/kitty)
 * [nautilus](https://apps.gnome.org/Nautilus/)
 * [hyprlock](https://github.com/hyprwm/hyprlock)
 * [hypridle](https://github.com/hyprwm/hypridle)
@@ -36,12 +35,13 @@ sudo cmake --install ./build
 ```
 _____
 
-##### Clone this repository and source files
+##### Clone this repository and create symlinks
 ```bash
 #clone repo
 cd ~/Downloads && 
 git clone https://github.com/human-d3v/dotfiles &&
-cp -r ./dotfiles/hypr ~/.config/hypr &&
-cp -r ./dotfiles/kitty ~/.config/kitty &&
-cp -r ./dotfiles/waybar ~/.config/waybar &&
+ln -s ./dotfiles/hypr ~/.config/hypr &&
+ln -s ./dotfiles/kitty ~/.config/kitty &&
+ln -s ./dotfiles/waybar ~/.config/waybar &&
+ln -s ./dotfiles/wezterm ~/.config/wezterm &&
 ```
