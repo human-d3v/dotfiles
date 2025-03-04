@@ -11,6 +11,7 @@ config.colors = {background = "black"}
 
 -- fonts
 config.font = wezterm.font 'MonaspaceNeon-Regular'
+config.font_size = 10
 config.harfbuzz_features = {"calt", "ss01", "ss02", "ss03", "ss04"}
 
 --disable defaults
