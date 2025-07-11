@@ -45,3 +45,4 @@ font-family = Monaspace Argon Medium
 theme = IC_Green_PPL
 background-opacity = 0.8
 background-blur = true
+keybind = ctrl+-=unbind
